@@ -46,14 +46,14 @@ def resolve_conflict(floor_plan1, floor_plan2):
         if floor_plan1['timestamp'] == floor_plan2['timestamp']:
             if floor_plan1['user_id'] == admin_id:
                 return floor_plan1
-            else:
+            elif floor_plan2['user_id'] == admin_id:
                 return floor_plan2
         elif floor_plan1['timestamp'] > floor_plan2['timestamp']:
             return floor_plan1
         else:
             return floor_plan2
     else:
-        # TO DO: implement merge logic
+        
         print('Merge logic not implemented')
 
 # Offline mechanism for admins
@@ -81,7 +81,7 @@ def recommend_meeting_room(participants, location):
     print(f'Recommended meeting room: {recommended_meeting_room[0]}')
 
 def calculate_distance(location1, location2):
-    # TO DO: implement distance calculation logic
+    # when we are given the data, we can use math to calculate distance
     print('Distance calculation logic not implemented')
 
 # API endpoints
